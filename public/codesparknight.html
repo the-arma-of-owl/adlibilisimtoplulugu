@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSpark Night - Test</title>
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="neon-title">CodeSpark Night</h1>
+            <p class="subtitle">Siber Güvenlik Alanınızı Keşfedin</p>
+        </div>
+
+        <!-- Name Form -->
+        <div id="nameForm" class="form-section">
+            <div class="card">
+                <h2>Başlamadan Önce</h2>
+                <p class="info-text">Lütfen adınızı ve soyadınızı giriniz:</p>
+                <form id="nameFormElement">
+                    <input type="text" id="userName" placeholder="Ad Soyad" required>
+                    <button type="submit" class="btn-neon">Teste Başla</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Test Section -->
+        <div id="testSection" class="test-section hidden">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <div class="question-counter">
+                <span id="currentQuestion">1</span> / <span id="totalQuestions">25</span>
+            </div>
+            
+            <div id="questionsContainer" class="questions-container">
+                <!-- Questions will be generated here -->
+            </div>
+            
+            <div class="test-controls">
+                <button id="prevBtn" class="btn-secondary" disabled>Önceki</button>
+                <button id="nextBtn" class="btn-primary">Sonraki</button>
+                <button id="submitBtn" class="btn-submit hidden">Testi Tamamla</button>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="resultSection" class="result-section hidden">
+            <div class="result-card">
+                <div class="result-icon" id="resultIcon">🔍</div>
+                <h2 class="result-title" id="resultTitle">Digital Forensics</h2>
+                <p class="result-message">Cevaplarınız kaydedildi</p>
+                <div class="result-description" id="resultDescription">
+                    Bu alanda uzmanlaşmak için dijital delillerin analizi ve adli süreçler konusunda kendinizi geliştirebilirsiniz.
+                </div>
+                <a href="/" class="btn-neon">Ana Sayfaya Dön</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/test.js"></script>
+</body>
+</html>
+

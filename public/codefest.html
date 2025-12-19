@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeFest - Projeksiyon Ekranı</title>
+    <link rel="stylesheet" href="css/codefest.css">
+</head>
+<body>
+    <!-- Selection Screen -->
+    <div id="selectionScreen" class="selection-screen">
+        <div class="selection-card">
+            <h1 class="selection-title">Görüntüleme Modu Seçin</h1>
+            <div class="selection-options">
+                <button class="selection-btn" data-mode="individual">
+                    <span class="btn-icon">🔢</span>
+                    <span class="btn-text">Alanları Ayrı Ayrı Görüntüle</span>
+                    <span class="btn-desc">Her alanı ayrı ekranda göster</span>
+                </button>
+                <button class="selection-btn" data-mode="combined">
+                    <span class="btn-icon">👥</span>
+                    <span class="btn-text">Tüm Topluluğu Görüntüle</span>
+                    <span class="btn-desc">Tüm alanları birlikte göster</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Individual Mode -->
+    <div id="individualMode" class="grid-container hidden">
+        <!-- Digital Forensics -->
+        <div class="section full-section" id="section-0-individual" data-field="Digital Forensics">
+            <div class="section-header">
+                <div class="section-icon">🔍</div>
+                <h2 class="section-title">Digital Forensics</h2>
+            </div>
+            <div class="names-container" id="container-0-individual">
+                <!-- Names will be added here -->
+            </div>
+        </div>
+        <!-- Offensive Security -->
+        <div class="section full-section hidden" id="section-1-individual" data-field="Offensive Security">
+            <div class="section-header">
+                <div class="section-icon">⚔️</div>
+                <h2 class="section-title">Offensive Security</h2>
+            </div>
+            <div class="names-container" id="container-1-individual">
+                <!-- Names will be added here -->
+            </div>
+        </div>
+        <!-- Defensive Security -->
+        <div class="section full-section hidden" id="section-2-individual" data-field="Defensive Security">
+            <div class="section-header">
+                <div class="section-icon">🛡️</div>
+                <h2 class="section-title">Defensive Security</h2>
+            </div>
+            <div class="names-container" id="container-2-individual">
+                <!-- Names will be added here -->
+            </div>
+        </div>
+        <!-- Network Security -->
+        <div class="section full-section hidden" id="section-3-individual" data-field="Network Security">
+            <div class="section-header">
+                <div class="section-icon">🌐</div>
+                <h2 class="section-title">Network Security</h2>
+            </div>
+            <div class="names-container" id="container-3-individual">
+                <!-- Names will be added here -->
+            </div>
+        </div>
+        <!-- Sosyal Mühendislik -->
+        <div class="section full-section hidden" id="section-4-individual" data-field="Sosyal Mühendislik">
+            <div class="section-header">
+                <div class="section-icon">🎭</div>
+                <h2 class="section-title">Sosyal Mühendislik</h2>
+            </div>
+            <div class="names-container" id="container-4-individual">
+                <!-- Names will be added here -->
+            </div>
+        </div>
+        <!-- Cyber Threat Intelligence -->
+        <div class="section full-section hidden" id="section-5-individual" data-field="Cyber Threat Intelligence">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <h2 class="section-title">Cyber Threat Intelligence</h2>
+            </div>
+            <div class="names-container" id="container-5-individual">
+                <!-- Names will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Combined Mode -->
+    <div id="combinedMode" class="grid-container hidden">
+        <!-- Digital Forensics -->
+        <div class="section" id="section-0" data-field="Digital Forensics">
+            <div class="section-header">
+                <div class="section-icon">🔍</div>
+                <h2 class="section-title">Digital Forensics</h2>
+            </div>
+            <div class="names-container" id="container-0">
+                <!-- Names will be added here -->
+            </div>
+        </div>
+
+        <!-- Offensive Security -->
+        <div class="section" id="section-1" data-field="Offensive Security">
+            <div class="section-header">
+                <div class="section-icon">⚔️</div>
+                <h2 class="section-title">Offensive Security</h2>
+            </div>
+            <div class="names-container" id="container-1">
+                <!-- Names will be added here -->
+            </div>
+        </div>
+
+        <!-- Defensive Security -->
+        <div class="section" id="section-2" data-field="Defensive Security">
+            <div class="section-header">
+                <div class="section-icon">🛡️</div>
+                <h2 class="section-title">Defensive Security</h2>
+            </div>
+            <div class="names-container" id="container-2">
+                <!-- Names will be added here -->
+            </div>
+        </div>
+
+        <!-- Network Security -->
+        <div class="section" id="section-3" data-field="Network Security">
+            <div class="section-header">
+                <div class="section-icon">🌐</div>
+                <h2 class="section-title">Network Security</h2>
+            </div>
+            <div class="names-container" id="container-3">
+                <!-- Names will be added here -->
+            </div>
+        </div>
+
+        <!-- Sosyal Mühendislik -->
+        <div class="section" id="section-4" data-field="Sosyal Mühendislik">
+            <div class="section-header">
+                <div class="section-icon">🎭</div>
+                <h2 class="section-title">Sosyal Mühendislik</h2>
+            </div>
+            <div class="names-container" id="container-4">
+                <!-- Names will be added here -->
+            </div>
+        </div>
+
+        <!-- Cyber Threat Intelligence -->
+        <div class="section" id="section-5" data-field="Cyber Threat Intelligence">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <h2 class="section-title">Cyber Threat Intelligence</h2>
+            </div>
+            <div class="names-container" id="container-5">
+                <!-- Names will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation for Individual Mode -->
+    <div id="individualNav" class="individual-nav hidden">
+        <button class="nav-btn" data-section="0">1</button>
+        <button class="nav-btn" data-section="1">2</button>
+        <button class="nav-btn" data-section="2">3</button>
+        <button class="nav-btn" data-section="3">4</button>
+        <button class="nav-btn" data-section="4">5</button>
+        <button class="nav-btn" data-section="5">6</button>
+    </div>
+
+    <script src="js/codefest.js"></script>
+</body>
+</html>
