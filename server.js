@@ -59,7 +59,7 @@ app.post('/api/submit-test', async (req, res) => {
       return res.status(400).json({ error: 'Eksik bilgi' });
     }
 
-    // Questions mapping - same as frontend
+    // Questions mapping - same as frontend (15 questions)
     const questions = [
       { options: [{field: 'OS'}, {field: 'SE'}, {field: 'DF'}, {field: 'DS'}] },
       { options: [{field: 'DF'}, {field: 'SE'}, {field: 'CTI'}, {field: 'DS'}] },
@@ -75,17 +75,7 @@ app.post('/api/submit-test', async (req, res) => {
       { options: [{field: 'CTI'}, {field: 'DF'}, {field: 'DS'}, {field: 'SE'}] },
       { options: [{field: 'CTI'}, {field: 'OS'}, {field: 'SE'}, {field: 'NS'}] },
       { options: [{field: 'NS'}, {field: 'SE'}, {field: 'CTI'}, {field: 'DS'}] },
-      { options: [{field: 'CTI'}, {field: 'NS'}, {field: 'SE'}, {field: 'OS'}] },
-      { options: [{field: 'DF'}, {field: 'NS'}, {field: 'OS'}, {field: 'DS'}] },
-      { options: [{field: 'NS'}, {field: 'CTI'}, {field: 'OS'}, {field: 'SE'}] },
-      { options: [{field: 'CTI'}, {field: 'NS'}, {field: 'OS'}, {field: 'DS'}] },
-      { options: [{field: 'CTI'}, {field: 'SE'}, {field: 'OS'}, {field: 'DF'}] },
-      { options: [{field: 'NS'}, {field: 'SE'}, {field: 'CTI'}, {field: 'OS'}] },
-      { options: [{field: 'DF'}, {field: 'OS'}, {field: 'SE'}, {field: 'DS'}] },
-      { options: [{field: 'CTI'}, {field: 'DF'}, {field: 'NS'}, {field: 'DS'}] },
-      { options: [{field: 'SE'}, {field: 'DF'}, {field: 'DS'}, {field: 'OS'}] },
-      { options: [{field: 'CTI'}, {field: 'SE'}, {field: 'NS'}, {field: 'DF'}] },
-      { options: [{field: 'NS'}, {field: 'SE'}, {field: 'CTI'}, {field: 'DF'}] }
+      { options: [{field: 'CTI'}, {field: 'NS'}, {field: 'SE'}, {field: 'OS'}] }
     ];
 
     // Field mapping

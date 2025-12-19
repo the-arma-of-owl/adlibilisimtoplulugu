@@ -320,8 +320,16 @@ body {
 .result-title {
     font-size: 2rem;
     color: var(--md-dark-primary);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     font-weight: 400;
+}
+
+.result-user-name {
+    font-size: 1.5rem;
+    color: var(--md-dark-on-surface);
+    margin-bottom: 16px;
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 .result-message {

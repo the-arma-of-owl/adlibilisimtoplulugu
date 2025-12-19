@@ -48,7 +48,7 @@ const fieldMap = {
     'NS': 3  // Network Security
 };
 
-// Questions array
+// Questions array - 15 questions, balanced across 6 fields
 const questions = [
     {
         text: 'Bir arkadaş grubunda kavga çıktı. Siz ne yaparsınız?',
@@ -185,96 +185,6 @@ const questions = [
             { text: 'İnisiyatif alıp birebir bilgi verir, gerekli çözümü uygularım.', field: 'OS' }
         ]
     },
-    {
-        text: 'Evinizdeki bir yavru kedinin kaybolduğunu fark ettiniz. Ne yaparsınız?',
-        options: [
-            { text: 'Bahçedeki tüm ipuçlarını inceleyerek izini sürmeye çalışırım.', field: 'DF' },
-            { text: 'Mahalleye haber verip yardım isterim.', field: 'NS' },
-            { text: 'Hızlıca bir plan yapıp kedi bulana kadar pes etmem.', field: 'OS' },
-            { text: 'Kapıları kapatıp kedinin güvenliğini sağlamaya odaklanırım.', field: 'DS' }
-        ]
-    },
-    {
-        text: 'Çalışma ekibinizle önemli bir toplantı yapacaksınız ancak bazı bilgiler eksik. Ne yaparsınız?',
-        options: [
-            { text: 'Ekiple konuşup eksik bilgileri toplamaya çalışırım.', field: 'NS' },
-            { text: 'Farklı kaynaklardan bilginin doğruluğunu kontrol ederim.', field: 'CTI' },
-            { text: 'Hızla bir strateji geliştirip toplantıyı yönlendirmeye çalışırım.', field: 'OS' },
-            { text: 'Mümkün olduğunca şeffaf olup herkese durumu açıklarım.', field: 'SE' }
-        ]
-    },
-    {
-        text: 'Bir kampanya planlıyorsunuz ve zorluklar yaşıyorsunuz. Nasıl bir yaklaşım sergilersiniz?',
-        options: [
-            { text: 'Önceki projelerdeki notları inceleyip bilgi toplarım.', field: 'CTI' },
-            { text: 'Herkesin fikirlerini alarak ortak bir plan oluştururum.', field: 'NS' },
-            { text: 'Beklenmedik durumlar için alternatif çözümler hazırlarım.', field: 'OS' },
-            { text: 'Planı tekrar gözden geçirir, en küçük hataları bile fark etmeye çalışırım.', field: 'DS' }
-        ]
-    },
-    {
-        text: 'Patronunuz ofiste önemli bir belgenin kaybolduğunu fark etti. Ne yaparsınız?',
-        options: [
-            { text: 'Olayı araştırmak için belgenin son görüldüğü zamanı detaylıca incelemeye başlarım.', field: 'CTI' },
-            { text: 'Sakin kalıp herkese sorular sorarak durumu anlamaya çalışırım.', field: 'SE' },
-            { text: 'Belgeleri yeniden hazırlamak için hızlıca çözümler üretirim.', field: 'OS' },
-            { text: 'Olayın tüm ayrıntılarını inceleyip delilleri bulmaya çalışırım.', field: 'DF' }
-        ]
-    },
-    {
-        text: 'Toplantı hazırlığı yapıyorsunuz, ama bilgiler eksik kalıyor. Ne yaparsınız?',
-        options: [
-            { text: 'Toplantıdan önce herkesten katkı isteyerek ortak bir ajanda oluştururum.', field: 'NS' },
-            { text: 'Herkesin fikrini dinleyip takımda birlik oluştururum.', field: 'SE' },
-            { text: 'Geçmiş verileri inceleyerek en iyi stratejiyi belirlerim.', field: 'CTI' },
-            { text: 'Planı kolaylaştırmak için liderlik yapıp süreci yönlendiririm.', field: 'OS' }
-        ]
-    },
-    {
-        text: 'Evinizdeki tek peynir diliminin kaybolduğunu fark ettiniz. Ne yaparsınız?',
-        options: [
-            { text: 'Tüm evi dikkatlice arayıp ipucu bulmaya çalışırım.', field: 'DF' },
-            { text: 'Kişisel planımı uygulayıp problemi kendi yöntemimle çözmeye çalışırım.', field: 'OS' },
-            { text: 'Durumu sakinlikle arkadaşlarıma anlatarak çözüm üretirim.', field: 'SE' },
-            { text: 'Bulunan delilleri gözden geçirip dikkatli davranırım.', field: 'DS' }
-        ]
-    },
-    {
-        text: 'Kargonuz yerine yanlış bir ürün teslim edildi. Ne yaparsınız?',
-        options: [
-            { text: 'Kargo şirketiyle iletişime geçip durumu araştırırım.', field: 'CTI' },
-            { text: 'Yanlış gelen ürünü dikkatlice inceleyip delil toplamaya çalışırım.', field: 'DF' },
-            { text: 'Komşulara sorup benzer bir durum olup olmadığını öğrenirim.', field: 'NS' },
-            { text: 'Şirketle görüşüp hatayı düzeltmelerini isterim.', field: 'DS' }
-        ]
-    },
-    {
-        text: 'Sınav sırasında bir arkadaşınız kopya çekiyormuş gibi görünüyor. Ne yaparsınız?',
-        options: [
-            { text: 'Arkadaşınızı uyarırım.', field: 'SE' },
-            { text: 'Sadece izleyici gibi davranır, ne olacağını beklerim.', field: 'DF' },
-            { text: 'Sınav bitince durumu yetkililere bildiririm.', field: 'DS' },
-            { text: 'Hiçbir şey yapmadan kendi işime devam ederim.', field: 'OS' }
-        ]
-    },
-    {
-        text: 'Takım kaptanısınız ve maç için hazırlık yapıyorsunuz. Ne yaparsınız?',
-        options: [
-            { text: 'Oyuncuların performans istatistiklerini inceleyip strateji belirlerim.', field: 'CTI' },
-            { text: 'Takımı motive etmek için konuşma yapar, güvenlerini artırırım.', field: 'SE' },
-            { text: 'Oyun planını herkesin güçlü yönüne göre düzenlerim.', field: 'NS' },
-            { text: 'Rakip takımı gözlemleyip taktik oluştururum.', field: 'DF' }
-        ]
-    },
-    {
-        text: 'Arkadaşınızın doğum günü için sürpriz bir plan yapıyorsunuz. Ne yaparsınız?',
-        options: [
-            { text: 'Organizasyon için herkese görevler verip süreci koordine ederim.', field: 'NS' },
-            { text: 'Yaratıcı bir sürpriz fikriyle ortamı coştururum.', field: 'SE' },
-            { text: 'Geçmiş doğum günü organizasyonlarından notlara bakar, planı ona göre hazırlarım.', field: 'CTI' },
-            { text: 'Ortamın krokisini çıkarıp tüm ayrıntıları incelerim.', field: 'DF' }
-        ]
-    }
 ];
 
 // State
@@ -498,6 +408,7 @@ async function submitTest() {
             
             resultIcon.textContent = selectedField.icon;
             document.getElementById('resultTitle').textContent = selectedField.name;
+            document.getElementById('resultUserName').textContent = userName;
             document.getElementById('resultDescription').textContent = selectedField.description;
         } else {
             alert('Bir hata oluştu. Lütfen tekrar deneyin.');
