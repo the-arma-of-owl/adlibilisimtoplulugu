@@ -3,31 +3,37 @@ const fields = [
     {
         name: 'Digital Forensics',
         icon: '🔍',
+        character: '/images/characters/digital-forensics.png',
         description: 'Dijital delillerin analizi ve adli süreçler konusunda uzmanlaşabilirsiniz. Bilgisayar sistemlerinden, mobil cihazlardan ve ağlardan delil toplama ve analiz etme becerileri geliştirebilirsiniz.'
     },
     {
         name: 'Offensive Security',
         icon: '⚔️',
+        character: '/images/characters/offensive-security.png',
         description: 'Penetrasyon testleri ve güvenlik açığı analizi alanında kariyer yapabilirsiniz. Sistemlerin güvenlik açıklarını bulma ve sömürme konusunda uzmanlaşabilirsiniz.'
     },
     {
         name: 'Defensive Security',
         icon: '🛡️',
+        character: '/images/characters/defensive-security.png',
         description: 'SOC operasyonları ve savunma stratejileri alanında çalışabilirsiniz. Siber saldırıları tespit etme, analiz etme ve önleme konularında kendinizi geliştirebilirsiniz.'
     },
     {
         name: 'Network Security',
         icon: '🌐',
+        character: '/images/characters/network-security.png',
         description: 'Ağ güvenliği ve altyapı koruması konusunda uzmanlaşabilirsiniz. Ağ trafiğini izleme, güvenlik duvarları ve ağ mimarisi tasarımı alanlarında kariyer yapabilirsiniz.'
     },
     {
         name: 'Sosyal Mühendislik',
         icon: '🎭',
+        character: '/images/characters/sosyal-muhendislik.png',
         description: 'Sosyal mühendislik ve insan faktörü güvenliği alanında uzmanlaşabilirsiniz. İnsan psikolojisini anlayarak güvenlik açıklarını tespit etme ve önleme konusunda kariyer yapabilirsiniz.'
     },
     {
         name: 'Cyber Threat Intelligence',
         icon: '📊',
+        character: '/images/characters/cyber-threat-intelligence.png',
         description: 'Tehdit istihbaratı ve risk analizi konusunda kariyer yapabilirsiniz. Siber tehditleri araştırma, analiz etme ve raporlama becerileri geliştirebilirsiniz.'
     }
 ];
@@ -465,7 +471,32 @@ async function submitTest() {
             document.getElementById('testSection').classList.add('hidden');
             document.getElementById('resultSection').classList.remove('hidden');
             
-            document.getElementById('resultIcon').textContent = selectedField.icon;
+            // Set character image
+            const characterImg = document.getElementById('resultCharacter');
+            const resultIcon = document.getElementById('resultIcon');
+            
+            // Reset states
+            characterImg.style.display = 'block';
+            resultIcon.style.display = 'none';
+            
+            // Set image source
+            characterImg.src = selectedField.character;
+            characterImg.alt = selectedField.name + ' Character';
+            
+            // Handle image load error
+            characterImg.onerror = function() {
+                // Fallback to icon if image doesn't exist
+                this.style.display = 'none';
+                resultIcon.style.display = 'block';
+            };
+            
+            // Handle successful image load
+            characterImg.onload = function() {
+                this.style.display = 'block';
+                resultIcon.style.display = 'none';
+            };
+            
+            resultIcon.textContent = selectedField.icon;
             document.getElementById('resultTitle').textContent = selectedField.name;
             document.getElementById('resultDescription').textContent = selectedField.description;
         } else {

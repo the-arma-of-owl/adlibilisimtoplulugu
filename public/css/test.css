@@ -256,9 +256,11 @@ body {
 .result-section {
     margin-top: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 60vh;
+    gap: 20px;
 }
 
 .result-card {
@@ -269,6 +271,35 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     max-width: 600px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.character-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-character {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: characterFloat 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(208, 188, 255, 0.5));
+    display: block;
+}
+
+@keyframes characterFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.02);
+    }
 }
 
 .result-icon {
@@ -313,6 +344,44 @@ body {
     display: inline-block;
 }
 
+.hashtag-reminder {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(208, 188, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(208, 188, 255, 0.3);
+    border-radius: 16px;
+    padding: 12px 20px;
+    font-size: 0.875rem;
+    color: var(--md-dark-on-surface);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    max-width: 280px;
+    animation: slideInRight 0.5s ease-out;
+}
+
+.hashtag-reminder p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.hashtag-reminder strong {
+    color: var(--md-dark-primary);
+    font-weight: 600;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .neon-title {
@@ -329,5 +398,22 @@ body {
     
     .test-controls button {
         width: 100%;
+    }
+    
+    .character-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .hashtag-reminder {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+    
+    .result-section {
+        padding: 20px;
     }
 }
