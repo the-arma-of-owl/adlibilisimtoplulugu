@@ -1,4 +1,4 @@
-# 🎯 CodeSpark Night - Adli Bilişim Topluluğu
+(Vibe Coding)# 🎯 CodeSpark Night - Adli Bilişim Topluluğu
 
 Siber güvenlik alanında kariyer yönlendirmesi için interaktif test uygulaması.
 
